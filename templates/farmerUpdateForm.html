@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+input[type=file],input[type=text],input[type=tel] ,
+input[type=number],input[type=email],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3></h3>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li >{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+<div>
+  <form method="post" enctype="multipart/form-data">
+		
+
+    <label for="farmer_id">Farmer ID</label>
+    <input type="number" id="farmer_id" name="farmer_id" placeholder="farmer Id" required>
+
+    
+	<label for="fpo_id">FPO ID</label>
+    <input type="number" id="new_fpo_id" name="new_fpo_id"placeholder="FPO ID."required>
+	
+	
+    
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+

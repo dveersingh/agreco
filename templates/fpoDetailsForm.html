@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+input[type=file],input[type=text],input[type=tel] ,
+input[type=number],input[type=email],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3></h3>
+
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li >{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+
+<div>
+  <form method="post" enctype="multipart/form-data">
+  <form action="/action_page.php">
+    <label for="Geographic_Location">Geographic Location</label>
+    <input type="text" id="Geographic_Location" name="Geographic_Location" placeholder="Geographic Location.." required>
+
+    <label for="Rgisterd_as_a_Company">Registerd as a Company</label>
+    <input type="text" id="Rgisterd_as_a_Company" name="Rgisterd_as_a_Company" placeholder="Registerd as a Company.." required>
+	
+		 <label for="Logo">Logo</label>
+		 		
+       <input type="file" name="file1" accept="image/*" placeholder="Logo.." required>
+    <!--<input type="text" id="Logo" name="Logo" placeholder="Logo.." required> -->
+	
+	 <label for="PAN">PAN</label>
+    <input type="text" id="PAN" name="PAN" placeholder="Enter Pan Card Number" required>
+	
+	 <label for="Mobile_No">Mobile Number</label>
+    <input type="tel"  id="Mobile_No" name="Mobile_No"  pattern="[6-9]{1}[0-9]{9}" placeholder="Enter the 10 digit Mobile Number" required>
+	
+	 <label for="Annual_Rvenue">Annual Revenue</label>
+    <input type="text" id="Annual_Rvenue" name="Annual_Rvenue" placeholder="Annual Revenue.." required>
+	
+	<!--
+	 <label for="No_of_Farmers">No. of Farmers</label>
+    <input type="number" id="No_of_Farmers" name="No_of_Farmers" min="10" placeholder="No. of Farmers..">
+	-->
+	 <label for="Total_Acreage">Total Acreage</label>
+    <input type="text" id="Total_Acreage" name="Total_Acreage" placeholder="Enter Total Acreage.." required>
+	
+	 <label for="Cultivable_Acreage_Season_wise">Cultivable Acreage Season wise</label>
+    <input type="text" id="Cultivable_Acreage_Season_wise" name="Cultivable_Acreage_Season_wise" placeholder="Cultivable Acreage Season wise.." required>
+	
+	 <label for="CBBO_associated_with">CBBO associated with</label>
+    <input type="text" id="CBBO_associated_with" name="CBBO_associated_with" placeholder="CBBO associated with.." required>
+	
+	
+	
+	<label for="Number_of_Services">Number of Services </label>
+    <input type="number" id="Number_of_Services" name="Number_of_Services" min="1" placeholder="Number of Services.." required>
+	
+	<label for="Type_of_services">Type of services</label>
+    <input type="text" id="Type_of_services" name="Type_of_services"placeholder="Type of services.." required>
+
+	 <label for="FPO_Assets">FPO Assets</label>
+    <input type="text" id="FPO_Assets" name="FPO_Assets" placeholder="FPO Assets.." required>
+	
+	 <label for="No_of_Partnerships">No. of Partnerships</label>
+    <input type="number"  id="No_of_Partnerships" name="No_of_Partnerships" min = "1" placeholder="No of Partnerships.." required>
+	
+	 <label for="Types_of_Partnerships">Types of Partnerships</label>
+    <input type="text" id="Types_of_Partnerships" name="Types_of_Partnerships" placeholder="Types of Partnerships.." required>
+	
+	 <label for="Name_of_partners">Name of partners</label>
+    <input type="text" id="Name_of_partners" name="Name_of_partners" placeholder="Name of partners.." required>
+	
+	 <label for="Licenses">Licenses</label>
+    <input type="text" id="Licenses" name="Licenses" placeholder="Licenses.." required>
+	
+	 <label for="Certifications">Certifications</label>
+    <input type="text" id="Certifications" name="Certifications" placeholder="Certifications.." required>
+	
+
+	
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+

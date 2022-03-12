@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+	img {
+    
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+<h2>Farmer Deail </h2>
+{% for farmers in farmers %}
+ <img src="{{ url_for('static', filename='upload/' + farmers.Photograph) }}" >
+ <br>
+ 
+
+{% endfor %}
+
+<table>
+  <tr>
+    <th>Farmer ID</th>
+    <th>Name</th>
+    <th>Mobile Number</th>
+	<th>Email</th>
+	<th>Language</th>
+	<th>Father_Name</th>
+	<th>National_ID</th>
+  </tr>
+  {% for farmers in farmers %}
+  <tr>
+    <td>{{ farmers.AE_Farmer_ID}} </td>
+    <td>{{ farmers.Name }}</td>
+    <td>{{ farmers.Mobile_Number}} </td>
+	<td>{{ farmers.email}} </td>
+	<td>{{ farmers.Language}} </td>
+	<td>{{ farmers.Father_Name}} </td>
+	<td>{{ farmers.National_ID}} </td>
+  </tr>
+{% endfor %}
+</table>
+<!--
+					 
+					 
+					
+					Photograph , 
+					,
+					, 
+					, 
+					 ,
+					, 
+					 , 
+					 -->
+					 
+					 
+<br><br>
+<table>
+  <tr>
+    <th>Farm_ID</th>
+    <th>Level_of_Education</th>
+    <th>Geographic_Location</th>
+	<th>Annual_Income</th>
+	<th>Aadhar_Card_No</th>
+	<th>Soil_Health_Card </th>
+  </tr>
+  
+   {% for farmers in farmers %}
+  <tr>
+    <td>{{ farmers.Farm_ID}} </td>
+    <td>{{ farmers.Level_of_Education }}</td>
+    <td>{{ farmers.Geographic_Location}} </td>
+	<td>{{ farmers.Annual_Income}} </td>
+	<td>{{ farmers.Aadhar_Card_No}} </td>
+	<td>{{ farmers.Soil_Health_Card}} </td>
+  </tr>
+{% endfor %}
+</table>
+
+<br><br>
+
+<table>
+  <tr>
+    <th>no_of_Crops_in_a_year</th>
+    <th>no_of_farm_assets</th>
+    <th>Land_holding_Area</th>
+	<th>Land_holding_for_cultivation_Area_</th>
+	<th>Kissan_Card</th>
+	
+  </tr>
+  
+     {% for farmers in farmers %}
+  <tr>
+    <td>{{ farmers.no_of_Crops_in_a_year}} </td>
+    <td>{{ farmers.no_of_farm_assets }}</td>
+    <td>{{ farmers.Land_holding_Area}} </td>
+	<td>{{ farmers.Land_holding_for_cultivation_Area_}} </td>
+	<td>{{ farmers.Kissan_Card}} </td>
+	
+  </tr>
+  {% endfor %}
+</table>
+
+
+<br><br>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Tehasil</th>
+    <th>Pincode</th>
+	<th>KVK_associated_with</th>
+	<th>Panchayat_Associated_with</th>
+	<th>Village</th>
+	
+  </tr>
+  
+      {% for farmers in farmers %}
+  <tr>
+    <td>{{ farmers.Address}} </td>
+    <td>{{ farmers.Tehasil }}</td>
+    <td>{{ farmers.Pincode}} </td>
+	<td>{{ farmers.KVK_associated_with}} </td>
+	<td>{{ farmers.Panchayat_Associated_with}} </td>
+	<td>{{ farmers.Village}} </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<a href="/farmer_form">Add farmer</a>
+<br><br>
+<a href="/fpo_list">List of Fpos</a>
+</body>
+</html>

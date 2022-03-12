@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+input[type=file],input[type=text],input[type=tel] ,
+input[type=number],input[type=email],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3></h3>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li >{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+<div>
+  <form method="post" enctype="multipart/form-data">
+		<label for="picture">Photograph</label>
+       <input type="file" name="file1" accept="image/*" >
+      
+
+    <label for="fname">Name</label>
+    <input type="text" id="Name" name="Name" placeholder="Your name.." required>
+
+    <label for="lname">Father's Name</label>
+    <input type="text" id="Father_Name" name="Father_Name" placeholder="Your father's name.."required>
+	
+	<label for="Language">Language</label>
+    <input type="text" id="Language" name="Language" placeholder="Language.."required>
+	
+		<label for="Mobile_Number">Mobile Number</label>
+    <input type="tel" id="Mobile_Number" name="Mobile_Number"  pattern="[6-9]{1}[0-9]{9}" placeholder="Enter 10 digit Mobile Number" required>
+	
+	<label for="email">email</label>
+    <input type="email" id="email" name="email" placeholder="Enter email"required>
+	<!--
+		<label for="Photograph">Photograph</label>
+    <input type="text" id="Photograph" name="Photograph" placeholder="Photograph.."required>
+	-->
+	
+	<label for="fname">National ID</label>
+    <input type="text" id="National_ID" name="National_ID" placeholder="National ID Number"required>
+	
+	<label for="fname">FPO ID</label>
+    <input type="text" id="FPO_ID" name="FPO_ID"placeholder="FPO ID."required>
+	
+	<label for="fname">Kisan Card</label>
+    <input type="text" id="Kissan_Card" name="Kissan_Card" placeholder="Kissan Card Number"required>
+	
+	<label for="fname">Farm ID</label>
+    <input type="text" id="Farm_ID" name="Farm_ID" placeholder="Farm ID.."required>
+	
+	
+	
+	
+		
+		
+	<label for="Level_of_Education">Level of Education</label>
+    <input type="text" id="Level_of_Education" name="Level_of_Education" placeholder="Level of Education.."required>
+	
+	
+	
+	<label for="Geographic_Location">Geographic Location</label>
+    <input type="text" id="Geographic_Location" name="Geographic_Location" placeholder="Geographic Location.."required>
+	
+	<label for="Annual_Income">Annual Income</label>
+    <input type="text" id="Annual_Income" name="Annual_Income" placeholder="Annual Income.."required>
+	
+	<label for="no_of_Crops_in_a_year">Number of Crops in a year</label>
+    <input type="number" id="no_of_Crops_in_a_year" name="no_of_Crops_in_a_year" min="1" placeholder="Number of Crops in a year.."required>
+	
+	 
+	<label for="no_of_farm_assets">Number of farm assets</label>
+    <input type="number" id="no_of_farm_assets" name="no_of_farm_assets" min="1" placeholder="Number of farm assets.."required>
+	
+	<label for="fname">Land holding Area</label>
+    <input type="text" id="Land_holding_Area" name="Land_holding_Area" placeholder="Land holding Area.."required>
+	
+	<label for="Land_holding_for_cultivation_Area_">Land holding for cultivation Area</label>
+    <input type="text" id="Land_holding_for_cultivation_Area_" name="Land_holding_for_cultivation_Area_" placeholder="Land holding for cultivation Area.."required>
+	
+
+	
+
+	
+	<label for="Address">Address</label>
+    <input type="text" id="Address" name="Address" placeholder="Address.."required>
+	
+	<label for="Tehasil">Tehasil</label>
+    <input type="text" id="Tehasil" name="Tehasil" placeholder="Tehasil.."required>
+	
+	<label for="Pincode">Pincode</label>
+    <input type="number" id="Pincode" name="Pincode" pattern="[0-9]{6}" placeholder="Pincode.."required>
+	
+	
+	<label for="Aadhar_Card_No">Aadhar Card Number</label>
+    <input type="number" id="Aadhar_Card_No" name="Aadhar_Card_No" pattern="[0-9]{12}" placeholder="Aadhar Card Number.."required>
+	
+	
+	
+	<label for="Soil_Health_Card">Soil Health Card</label>
+    <input type="text" id="Soil_Health_Card" name="Soil_Health_Card" placeholder="Soil Health Card.."required>
+	
+	<label for="KVK_associated_with">KVK associated with</label>
+    <input type="text" id="KVK_associated_with" name="KVK_associated_with" placeholder="KVK associated with.."required>
+	
+	<label for="Panchayat_Associated_with">Panchayat Associated with</label>
+    <input type="text" id="Panchayat_Associated_with" name="Panchayat_Associated_with" placeholder="Panchayat Associated with.."required>
+	
+	<label for="Village">Village</label>
+    <input type="text" id="Village" name="Village" placeholder="Village.."required>
+	
+	
+
+    
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+
